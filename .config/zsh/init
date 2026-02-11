@@ -5,3 +5,7 @@ fi
 if command -v starship &> /dev/null; then
   eval "$(starship init zsh)"
 fi
+
+if [ -f "$(brew --prefix 2>/dev/null)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+  source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
